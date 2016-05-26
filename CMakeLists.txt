@@ -9,6 +9,8 @@ set(SOURCE_FILES
         src/chapter1/main.cpp
         src/chapter1/exercise1.cpp
 
+        src/chapter3/main.cpp
+
 
         src/chapter5/exercise52.cpp
         src/chapter5/exercise53.cpp

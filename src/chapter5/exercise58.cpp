@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include <c++/5.3.0/bitset>
+#include <bitset>
 
 using namespace std;
 
