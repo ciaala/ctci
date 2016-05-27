@@ -7,12 +7,15 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise56.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise52.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter5/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise54.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise57.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise53.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise58.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise54.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter5/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise55.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise57.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter4/GraphNode.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter4/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter4/GraphNode.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter3/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
