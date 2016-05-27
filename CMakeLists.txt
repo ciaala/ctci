@@ -11,6 +11,8 @@ set(SOURCE_FILES
 
         src/chapter3/main.cpp
 
+        src/chapter4/main.cpp
+        src/chapter4/GraphNode.cpp
 
         src/chapter5/exercise52.cpp
         src/chapter5/exercise53.cpp
