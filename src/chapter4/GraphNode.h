@@ -7,6 +7,9 @@
 #define CTCI_GRAPHNODE_H
 
 #include <unordered_set>
+#include <memory>
+#include <atomic>
+
 using namespace std;
 
 class GraphNode {
