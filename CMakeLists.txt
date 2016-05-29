@@ -22,5 +22,18 @@ set(SOURCE_FILES
         src/chapter5/exercise57.cpp
         src/chapter5/exercise58.cpp
         src/chapter5/main.cpp
+
+
+        src/chapter7/exercise1/Deck.cpp
+        src/chapter7/exercise1/Deck.h
+        src/chapter7/exercise1/Blackjack.cpp
+        src/chapter7/exercise1/Blackjack.h
+        src/chapter7/exercise1/Card.cpp
+        src/chapter7/exercise1/Card.h
+        src/chapter7/exercise2/Employee.cpp
+        src/chapter7/exercise2/Employee.h
+        src/chapter7/exercise2/CallCenter.cpp
+        src/chapter7/exercise2/CallCenter.h
+
         )
 add_executable(ctci ${SOURCE_FILES})
