@@ -7,6 +7,17 @@
 
 #include <string>
 #include <atomic>
+#include "CallRank.h"
+
+using namespace std;
+
+class Employee;
+
+class Respondent;
+
+class Manager;
+
+class Director;
 
 class Employee {
 
@@ -17,19 +28,25 @@ private:
 public:
     Employee(string firstname, string lastname);
 
-    boolean isAvailable();
+    CallRank getRank();
+
+    bool isAvailable();
 
 };
 
 class Director : public Employee {
 
 
+public:
+    Director(const string &firstname, const string &lastname) : Employee(firstname, lastname) { }
 };
 
 class Manager : public Employee {
     Director *director;
 
 public:
+    Manager(const string &firstname, const string &lastname) : Employee(firstname, lastname) { }
+
     Director *getDirector();
 
     void setDirector(Director *director);
@@ -45,6 +62,8 @@ private:
 public:
 
 public:
+
+    Respondent(const string &firstname, const string &lastname) : Employee(firstname, lastname) { }
 
     Manager *getManager();
 

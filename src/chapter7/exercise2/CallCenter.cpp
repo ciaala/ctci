@@ -1,9 +1,0 @@
-//
-// Created by crypt on 5/29/2016.
-//
-
-#include "CallCenter.h"
-
-void CallCenter::dispatchCall(Call call) {
-    this->employees.
-}

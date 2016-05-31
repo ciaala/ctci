@@ -30,10 +30,19 @@ set(SOURCE_FILES
         src/chapter7/exercise1/Blackjack.h
         src/chapter7/exercise1/Card.cpp
         src/chapter7/exercise1/Card.h
+
         src/chapter7/exercise2/Employee.cpp
         src/chapter7/exercise2/Employee.h
-        src/chapter7/exercise2/CallCenter.cpp
-        src/chapter7/exercise2/CallCenter.h
+        src/chapter7/exercise2/CallHandler.cpp
+        src/chapter7/exercise2/CallHandler.h
+        src/chapter7/exercise2/CallRank.cpp
+        src/chapter7/exercise2/CallRank.h
+        src/chapter7/exercise2/Caller.cpp
+        src/chapter7/exercise2/Caller.h
+        src/chapter7/exercise2/main.cpp
 
         )
+add_subdirectory(src/chapter7)
 add_executable(ctci ${SOURCE_FILES})
+
+target_link_libraries(ctci LINK_PUBLIC chapter7)
