@@ -1,0 +1,2 @@
+#10.4 Sorted Search, No Size
+> You are given an array-like structure Listy which lacks a size method. It does, however have an a _elementAt(i)_ method that returns the element at index _i_ in _O(1)_ time. If i is beyond the bound of the data structure, it returns -1. ( For this reason the data structure support only positive integers.) Given a _Listy_ which contains sorted, positive integers, find the index at which an element _x_ occurs. if _x_ occurs multiple times, you may return any index.
