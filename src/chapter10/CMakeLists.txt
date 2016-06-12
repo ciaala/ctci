@@ -5,7 +5,11 @@ set(SOURCE_FILES
 
         exercise4/Listy.cpp
         exercise4/Listy.h
-        exercise4/SortedSearchNoSize.cpp exercise4/SortedSearchNoSize.h)
+        exercise4/SortedSearchNoSize.cpp
+        exercise4/SortedSearchNoSize.h
+
+
+        )
 
 add_library(chapter10 ${SOURCE_FILES})
 
