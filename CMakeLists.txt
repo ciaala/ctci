@@ -41,7 +41,7 @@ set(SOURCE_FILES
         src/chapter7/exercise2/Caller.h
         src/chapter7/exercise2/main.cpp
 
-        )
+        src/chapter15/exercise3/Philosopher.cpp src/chapter15/exercise3/Philosopher.h src/chapter15/exercise3/Table.cpp src/chapter15/exercise3/Table.h src/chapter15/exercise3/Chopstick.cpp src/chapter15/exercise3/Chopstick.h)
 add_subdirectory(src/chapter7)
 add_subdirectory(src/chapter10)
 add_executable(ctci ${SOURCE_FILES})
