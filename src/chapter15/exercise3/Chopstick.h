@@ -8,7 +8,7 @@ namespace exercise15_3 {
 
 
     class Chopstick {
-    }
+    };
 
 };
 

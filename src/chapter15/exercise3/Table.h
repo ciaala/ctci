@@ -7,9 +7,11 @@
 
 #include "Chopstick.h"
 #include <cstddef>
-#include <c++/5.3.0/vector>
+#include <memory>
+#include <vector>
 
 using namespace std;
+
 namespace exercise15_3 {
 
 
@@ -17,13 +19,16 @@ namespace exercise15_3 {
 
     private:
         std::vector<Chopstick> chopsticks;
-
+        unsigned seats;
+        unsigned id;
+        static unsigned Counter;
 
     public:
-        Table(const std::vector<Chopstick> &chopsticks) : chopsticks(chopsticks) { }
+        Table(unsigned seats);
 
-        Table(size_t chopsticks);
+        ~Table();
 
+        static unique_ptr<Table> create(unsigned seats);
     };
 
 };

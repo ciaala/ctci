@@ -11,8 +11,7 @@ set(SOURCE_FILES
 
         src/chapter3/main.cpp
 
-        src/chapter4/main.cpp
-        src/chapter4/GraphNode.cpp
+
 
         src/chapter5/exercise52.cpp
         src/chapter5/exercise53.cpp
@@ -41,9 +40,23 @@ set(SOURCE_FILES
         src/chapter7/exercise2/Caller.h
         src/chapter7/exercise2/main.cpp
 
-        src/chapter15/exercise3/Philosopher.cpp src/chapter15/exercise3/Philosopher.h src/chapter15/exercise3/Table.cpp src/chapter15/exercise3/Table.h src/chapter15/exercise3/Chopstick.cpp src/chapter15/exercise3/Chopstick.h)
+        )
+add_subdirectory(src/chapter1)
+add_subdirectory(src/chapter2)
+add_subdirectory(src/chapter3)
+add_subdirectory(src/chapter4)
+add_subdirectory(src/chapter5)
+add_subdirectory(src/chapter6)
 add_subdirectory(src/chapter7)
+add_subdirectory(src/chapter8)
+add_subdirectory(src/chapter9)
 add_subdirectory(src/chapter10)
+add_subdirectory(src/chapter11)
+add_subdirectory(src/chapter12)
+add_subdirectory(src/chapter13)
+add_subdirectory(src/chapter14)
+add_subdirectory(src/chapter15)
+
 add_executable(ctci ${SOURCE_FILES})
 
-target_link_libraries(ctci LINK_PUBLIC chapter7 chapter10)
+target_link_libraries(ctci LINK_PUBLIC chapter7 chapter10 chapter15)
