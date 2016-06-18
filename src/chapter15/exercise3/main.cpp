@@ -10,15 +10,15 @@
 using namespace std;
 namespace exercise15_3 {
     void main() {
-        unsigned PHILOSOPERS = 20;
+        unsigned PHILOSOPHERS = 20;
         vector<shared_ptr<Philosopher>> philosophers;
-        shared_ptr<Table> table = Table::create(PHILOSOPERS);
+        shared_ptr<Table> table = Table::create(PHILOSOPHERS);
         vector<std::thread *> threads;
-        for (unsigned i = 0; i < PHILOSOPERS; ++i) {
+        for (unsigned i = 0; i < PHILOSOPHERS; ++i) {
             philosophers.push_back(Philosopher::create(table));
         }
         cout << "Created " << philosophers.size() << " philosophers" << endl;
-        for (unsigned i = 0; i < PHILOSOPERS; ++i) {
+        for (unsigned i = 0; i < PHILOSOPHERS; ++i) {
 
 
             std::thread *thread0 = new thread(
@@ -36,8 +36,12 @@ namespace exercise15_3 {
         }
         */
         for (auto thread0 : threads) {
-            if (thread0->joinable())
+            if (thread0->joinable()) {
                 thread0->join();
+                cout << "Thread["  << thread0->get_id() << "] joined" << endl;
+
+
+        }
             delete thread0;
         }
 /**/

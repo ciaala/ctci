@@ -29,11 +29,12 @@ namespace exercise15_3 {
         cout << "Trying to dine " << *this << endl;
 
         while (!hasDined) {
-            shared_ptr<Chopstick> left = this->seat->getLeftChopstick().lock();
-            if (left->acquire()) {
-                cout << *this << " has got the left chopstick " << endl;
-                shared_ptr<Chopstick> right = this->seat->getRightChopstick().lock();
-                if (right->acquire()) {
+            shared_ptr<Chopstick> left = this->seat->getLeftChopstick();
+            if (left != nullptr && left->acquire()) {
+                cout << *this << " has got the left " << *left << endl;
+                shared_ptr<Chopstick> right = this->seat->getRightChopstick();
+                if (right != nullptr && right->acquire()) {
+                    cout << *this << " has got the right " << *right<< endl;
                     cout << "Philosopher[" << this->id << "] dined" << endl;
                     this->hasDined = true;
                     right->release();
@@ -41,6 +42,7 @@ namespace exercise15_3 {
                 left->release();
             }
             this_thread::yield();
+            this_thread::sleep_for(1s);
         }
 
     }

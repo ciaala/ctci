@@ -18,9 +18,9 @@ namespace exercise15_3 {
     public:
         Seat(shared_ptr<Chopstick> left, shared_ptr<Chopstick> right);
 
-        weak_ptr<Chopstick> getLeftChopstick();
+        shared_ptr<Chopstick> getLeftChopstick();
 
-        weak_ptr<Chopstick> getRightChopstick();
+        shared_ptr<Chopstick> getRightChopstick();
 
     };
 }

@@ -20,17 +20,18 @@ namespace exercise15_3 {
         this->id = Table::Counter;
         cout << "Create Table[" << this->id << "]" << endl;
         for (unsigned i = 0; i < seats; ++i) {
-            chopsticks.emplace_back();
+            chopsticks.push_back(make_shared<Chopstick>());
         }
 
-        shared_ptr<Chopstick> left = chopsticks[0];
-        shared_ptr<Chopstick> right = chopsticks[1];
+        shared_ptr<Chopstick> left;
+        shared_ptr<Chopstick> right = chopsticks[0];
 
         for (unsigned i = 0; i < seats; ++i) {
-            this->seats.push_back(make_shared<Seat>(left, right));
-            //this->seats.emplace_back(left, right);
             left = right;
             right = chopsticks[(i + 1) % seats];
+            this->seats.push_back(make_shared<Seat>(left, right));
+            //this->seats.emplace_back(left, right);
+
         }
         this->free_seats_iterator = this->seats.begin();
     }

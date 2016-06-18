@@ -5,16 +5,16 @@
 #include "Seat.h"
 
 namespace exercise15_3 {
-    Seat::Seat(shared_ptr<Chopstick> left, shared_ptr<Chopstick> right) :
-            left(left),
-            right(right) {
+    Seat::Seat(shared_ptr<Chopstick> _left, shared_ptr<Chopstick> _right) :
+            left(_left),
+            right(_right) {
     }
 
-    weak_ptr<Chopstick> Seat::getLeftChopstick() {
+    shared_ptr<Chopstick> Seat::getLeftChopstick() {
         return this->left;
     }
 
-    weak_ptr<Chopstick> Seat::getRightChopstick() {
+    shared_ptr<Chopstick> Seat::getRightChopstick() {
         return this->right;
     }
 

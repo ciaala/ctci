@@ -21,6 +21,7 @@ namespace exercise15_3 {
         bool acquire();
 
         void release();
+        friend ostream &operator<<(ostream &out, Chopstick& chopstick);
 
     };
 
