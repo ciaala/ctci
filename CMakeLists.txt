@@ -44,6 +44,7 @@ set(SOURCE_FILES
         )
 add_subdirectory(src/chapter7)
 add_subdirectory(src/chapter10)
+add_subdirectory(src/chapter16)
 add_executable(ctci ${SOURCE_FILES})
 
 target_link_libraries(ctci LINK_PUBLIC chapter7 chapter10)
