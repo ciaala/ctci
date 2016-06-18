@@ -12,7 +12,6 @@ set(SOURCE_FILES
         src/chapter3/main.cpp
 
 
-
         src/chapter5/exercise52.cpp
         src/chapter5/exercise53.cpp
         src/chapter5/exercise54.cpp
@@ -57,6 +56,9 @@ add_subdirectory(src/chapter13)
 add_subdirectory(src/chapter14)
 add_subdirectory(src/chapter15)
 
-add_executable(ctci ${SOURCE_FILES})
+set(THREADS_PREFER_PTHREAD_FLAG ON)
 
-target_link_libraries(ctci LINK_PUBLIC chapter7 chapter10 chapter15)
+add_executable(ctci ${SOURCE_FILES})
+find_package(Threads REQUIRED)
+#target_compile_options(PUBLIC ctci "-pthread")
+target_link_libraries(ctci LINK_PUBLIC chapter7 chapter10 chapter15 pthread)

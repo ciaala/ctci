@@ -12,7 +12,8 @@ namespace exercise15_3 {
         weak_ptr<Table> table;
         static unsigned Counter;
         unsigned id;
-
+        shared_ptr<Seat> seat;
+        bool hasDined;
 
     public:
         void run();
@@ -24,6 +25,11 @@ namespace exercise15_3 {
         static unique_ptr<Philosopher> create(weak_ptr<Table> table);
 
         void dine();
+
+        friend ostream &operator<<(ostream &out, Philosopher &philosopher);
+
     };
+
+
 }
 #endif //CTCI_PHILOSOPHER_H
