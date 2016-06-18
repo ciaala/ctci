@@ -11,7 +11,10 @@ set(SOURCE_FILES
         exercise3/Chopstick.h
         exercise3/main.cpp
         exercise3/Seat.cpp
-        exercise3/Seat.h)
+        exercise3/Seat.h
+
+        exercise5/main.cpp
+        )
 
 
 add_library(${LIBRARY_NAME} ${SOURCE_FILES})
