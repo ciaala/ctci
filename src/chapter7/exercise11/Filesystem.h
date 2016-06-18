@@ -6,7 +6,7 @@
 #define CTCI_FILESYSTEM_H
 
 #include <string>
-#include <c++/5.3.0/vector>
+#include <vector>
 
 using namespace std;
 namespace ctci {
