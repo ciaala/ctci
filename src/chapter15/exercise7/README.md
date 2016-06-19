@@ -1,0 +1,3 @@
+#15.7 FizzBuzz
+
+In the classic problem FizzBuzz, you are told to print the numbers from 1 to n. However when the number is divisible by 3 print "Fizz". When it is divisible by 5 print "Buzz". When it divisible by 3 and 5, print "FizzBuzz". In this problem you are asked to implement a multithread version of FizzBuzz with four threads. One thread checks for divisibility of a 3 and prints "Fizz", another is 

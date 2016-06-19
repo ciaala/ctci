@@ -14,7 +14,7 @@ set(SOURCE_FILES
         exercise3/Seat.h
 
         exercise5/main.cpp
-        )
+        exercise7/main.cpp)
 
 
 add_library(${LIBRARY_NAME} ${SOURCE_FILES})
