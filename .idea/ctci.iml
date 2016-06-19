@@ -5,28 +5,21 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise3/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise4/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Seat.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Philosopher.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Chopstick.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Philosopher.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Chopstick.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Table.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Seat.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Philosopher.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Table.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Seat.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Table.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise7/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise5/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise11/Filesystem.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise11/Filesystem.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Card.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Blackjack.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Deck.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Card.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Blackjack.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Deck.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise2/Caller.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise2/CallHandler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise2/main.cpp" isTestSource="false" />
@@ -36,6 +29,14 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise2/Employee.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise2/CallRank.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise2/Caller.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Card.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Blackjack.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Deck.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Card.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Blackjack.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise1/Deck.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise11/Filesystem.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter7/exercise11/Filesystem.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter7/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise1/SortedMerge.cpp" isTestSource="false" />
