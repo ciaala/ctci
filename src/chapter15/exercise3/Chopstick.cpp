@@ -30,7 +30,7 @@ namespace exercise15_3 {
         mutex0.unlock();
     }
 
-    ostream &exercise15_3::operator<<(ostream &out, Chopstick &chopstick) {
+    ostream &operator<<(ostream &out, Chopstick &chopstick) {
         ostringstream ost;
         ost << "Chopstick[" << chopstick.id << ']';
         return out << ost.str();
