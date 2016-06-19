@@ -56,6 +56,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter4/GraphNode.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter4/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter4/GraphNode.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter4/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter3/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter1/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter1/exercise1.cpp" isTestSource="false" />
@@ -65,13 +66,13 @@
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
-          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.3.0/include" />
-          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.3.0/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.4.0/include" />
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.4.0/include-fixed" />
           <root url="file:///usr/include" />
         </CLASSES>
         <SOURCES>
-          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.3.0/include" />
-          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.3.0/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.4.0/include" />
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/5.4.0/include-fixed" />
           <root url="file:///usr/include" />
         </SOURCES>
       </library>
