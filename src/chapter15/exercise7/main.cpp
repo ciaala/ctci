@@ -126,7 +126,7 @@ namespace exercise15_7 {
     }
 
     void main() {
-        unsigned N = 1 << 22;
+        unsigned N = 1 << 12;
         //singleThread(N);
         multiThread(N);
     }

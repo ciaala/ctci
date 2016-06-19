@@ -2,6 +2,8 @@
 // Created by Francesco Fiduccia on 17/06/16.
 //
 
-int main(const int argc, const char **argv) {
+namespace exercise16_3 { void main(); }
 
+int main_chapter16(const int argc, const char **argv) {
+    exercise16_3::main();
 }
