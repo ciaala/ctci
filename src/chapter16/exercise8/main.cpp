@@ -11,7 +11,7 @@ using namespace std;
 namespace exercise16_8 {
 
 
-    string units[] = {"billion", "million", "thousand",""};
+    string units[] = {"billion", "million", "thousand", ""};
     string digit[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
                       "ten", "eleven", "twelve",
                       "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
@@ -24,7 +24,7 @@ namespace exercise16_8 {
             t = n / 100;
             n %= 100;
             ost << digit[t] << " hundred" << (t > 1 ? "s " : " ");
-            if (n > 0 ) {
+            if (n > 0) {
                 ost << "and ";
             }
         }
@@ -32,7 +32,7 @@ namespace exercise16_8 {
         if (n > 20) {
             t = n / 10;
             int r = n % 10;
-            ost << dec[t-2] << " " << digit[r];
+            ost << dec[t - 2] << "-" << digit[r];
         } else {
             ost << digit[n];
         }
@@ -48,7 +48,8 @@ namespace exercise16_8 {
             int q = t / d;
             if (q > 0) {
                 printEnglish(sout, q);
-                sout << " " << units[i] << (q > 1 ? "s, " : ", ");
+                if (d > 1)
+                    sout << " " << units[i] << (q > 1 ? "s, " : ", ");
             }
 
             int r = n % d;
@@ -56,7 +57,7 @@ namespace exercise16_8 {
             d /= 1000;
             cout << sout.str() << endl;
             i++;
-        } while (t > 1);
+        } while (d >= 1);
         return sout.str();
     }
 
