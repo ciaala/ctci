@@ -5,6 +5,6 @@ namespace exercise16_3 { void main(); }
 namespace exercise16_4 { void main(); }
 
 int main_chapter16(const int argc, const char **argv) {
-    exercise16_3::main();
+    //exercise16_3::main();
     exercise16_4::main();
 }
