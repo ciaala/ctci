@@ -8,6 +8,12 @@ set(SOURCE_FILES
         exercise8/main.cpp
         exercise9/main.cpp
         exercise10/main.cpp
+        exercise11/main.cpp
+        exercise12/main.cpp
+        exercise13/main.cpp
+        exercise14/main.cpp
+        exercise15/main.cpp
+
         )
 
 add_library(chapter16 ${SOURCE_FILES})

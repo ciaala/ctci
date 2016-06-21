@@ -1,0 +1,2 @@
+#16.11 Diving Board
+You are building a diving board by placing a bunch of planks of wood end-to-end. There are two types of planks, one of length _shorter_ and one of length _longer_. You must use exactly K planks of wood. Write a method to generate all possible lengths for the diving board.
