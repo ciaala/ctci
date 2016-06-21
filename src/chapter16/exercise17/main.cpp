@@ -21,6 +21,7 @@ namespace exercise16_17 {
                 sum = 0;
             }
         }
+        return maxSum;hjk
     }
 
     void main() {
