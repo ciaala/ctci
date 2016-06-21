@@ -57,7 +57,7 @@ namespace exercise16_18 {
         unsigned long countAlternate = pattern.length() - countMain;
         unsigned long maxMainSize = value.length() / countMain;
 
-        for (unsigned mainSize = 0; mainSize <= maxMainSize; mainSize++) {
+        for (unsigned mainSize = 1; mainSize <= maxMainSize; mainSize++) {
             unsigned long remainingLength = value.length() - (mainSize * countMain);
             unsigned long altSize = remainingLength / countAlternate;
             if (altSize == 0 || ((remainingLength % countAlternate) == 0)) {
