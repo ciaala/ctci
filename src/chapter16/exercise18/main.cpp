@@ -53,9 +53,12 @@ namespace exercise16_18 {
     void mmatches(string &value, string &pattern) {
     //    Result result;
 
-        unsigned long countMain = (unsigned long) count(pattern.begin(), pattern.end(), pattern.at(0));
-        unsigned long countAlternate = pattern.length() - countMain;
-        unsigned long maxMainSize = value.length() / countMain;
+        unsigned long countMain = 0;
+        //countMain = (unsigned long) count(pattern.begin(), pattern.end(), pattern.at(0));
+        unsigned long countAlternate = 0;
+                //pattern.length() - countMain;
+        unsigned long maxMainSize =1;
+                //maxMainSize = value.length() / countMain;
         //?? unsigned long maxAlternateSize = value.length() / countAlternate;
 
 
@@ -74,8 +77,8 @@ namespace exercise16_18 {
     }
 
     void main() {
-        string pattern = "aabab";
-        string value = "catcatgocatgo";
+        string pattern = {"aabab"};
+        string value = {"catcatgocatgo"};
 
        // Result result;
 
