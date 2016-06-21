@@ -26,7 +26,7 @@ namespace exercise16_18 {
     bool matchValuePattern(string &value, string &pattern, unsigned long mainSize, unsigned long altSize) {
         unsigned valueOffset = 0;
         unsigned firstAltOffset = 0;
-        for (unsigned long i = 0; i < value.length(); i++) {
+        for (unsigned long i = 0; i < pattern.length(); i++) {
             /**
              * Initialize Alternative
              */
@@ -41,54 +41,50 @@ namespace exercise16_18 {
             unsigned long size = pattern.at(i) == pattern.at(0) ? mainSize : altSize;
             unsigned long offset = pattern.at(i) == pattern.at(0) ? 0 : firstAltOffset;
 
-            if (value.compare(valueOffset, size, value, size, offset) != 0) {
+            if (value.compare(valueOffset, size, value, offset, size) != 0) {
                 return false;
             }
             valueOffset += size;
         }
-        return false;
+        return true;
     }
 
 
-    void mmatches(string &value, string &pattern) {
-    //    Result result;
+    Result mmatches(string &value, string &pattern) {
+        Result result;
 
-        unsigned long countMain = 0;
-        //countMain = (unsigned long) count(pattern.begin(), pattern.end(), pattern.at(0));
-        unsigned long countAlternate = 0;
-                //pattern.length() - countMain;
-        unsigned long maxMainSize =1;
-                //maxMainSize = value.length() / countMain;
-        //?? unsigned long maxAlternateSize = value.length() / countAlternate;
+        unsigned long countMain = (unsigned long) count(pattern.begin(), pattern.end(), pattern.at(0));
+        unsigned long countAlternate = pattern.length() - countMain;
+        unsigned long maxMainSize = value.length() / countMain;
 
-
-        for (unsigned mainSize = 0; mainSize < maxMainSize; mainSize++) {
-            unsigned long altSize = (value.length() - (mainSize * countMain)) / countAlternate;
-            if ((value.length() % (mainSize * countMain) == 0) && (value.length() % (altSize * countAlternate) == 0)) {
+        for (unsigned mainSize = 0; mainSize <= maxMainSize; mainSize++) {
+            unsigned long remainingLength = value.length() - (mainSize * countMain);
+            unsigned long altSize = remainingLength / countAlternate;
+            if (altSize == 0 || ((remainingLength % countAlternate) == 0)) {
 
                 if (matchValuePattern(value, pattern, mainSize, altSize)) {
-                    //result.patternElements.insert({pattern.at(0), pattern.substr(0, mainSize)});
+                    result.isAMatch = true;
+                    result.patternElements.insert({pattern.at(0), value.substr(0, mainSize)});
+                    auto indexAlt = pattern.find_first_not_of(pattern.at(0));
+                    result.patternElements.insert({pattern.at(indexAlt), value.substr(indexAlt*mainSize, altSize)});
                     break;
                 }
             }
         }
 
-        // return result;
+        return result;
     }
 
     void main() {
-        string pattern = {"aabab"};
-        string value = {"catcatgocatgo"};
+        string mpattern = "aabab";
+        string mvalue = "catcatgocatgo";
 
-       // Result result;
-
-        //result =
-                mmatches(value, pattern);
-//        cout << "'" << value << "'@'" << pattern << "'" << endl;
- //       cout << "Does it match ? " << (result.isAMatch ? "true" : "false") << endl;
-        /*for_each(result.patternElements.begin(), result.patternElements.end(),
+        Result result = mmatches(mvalue, mpattern);
+        cout << "'" << mvalue << "'@'" << mpattern << "'" << endl;
+        cout << "Does it match ? " << (result.isAMatch ? "true" : "false") << endl;
+        for_each(result.patternElements.begin(), result.patternElements.end(),
                  [](auto item) { cout << item.first << ": " << item.second << endl; });
-*/
+
     }
 
 }
