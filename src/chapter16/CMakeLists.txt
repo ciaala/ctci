@@ -13,6 +13,10 @@ set(SOURCE_FILES
         exercise13/main.cpp
         exercise14/main.cpp
         exercise15/main.cpp
+        exercise16/main.cpp
+        exercise17/main.cpp
+        exercise18/main.cpp
+        exercise19/main.cpp
 
         )
 
