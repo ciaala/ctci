@@ -42,7 +42,7 @@ int main_chapter16(const int argc, const char **argv) {
     //exercise16_19::main();
     //exercise16_20::main();
     //exercise16_21::main();
-    exercise16_22::main();
+    //exercise16_22::main();
     exercise16_23::main();
     exercise16_24::main();
     exercise16_25::main();
