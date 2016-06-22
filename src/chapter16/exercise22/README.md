@@ -1,8 +1,9 @@
-#16.15 Master Mind
-The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B).
-For example the computer might have a RGGB: slots #1 is red, Slots #2 and #3 are green and slot #4 is blue.
-You the user are trying to guess the solution. You might, for example, guess YRGB ...
-Write a method that, given a guess and a solution returns the number of hits and pseudo-hits.
+#16.22 Langton's Ant:
+An ant is sitting on an infinite grid of black and white squares. It initially faces right. At each step, it does the following:
+- At a white square, flips the color of the square, turn 90 degrees left (counter-clockwise) and move forward one unit.
+- At a black square, flips the color of the square, turn 90 degrees right (counter-clockwise) and move forward one unit.
 
-_#693_
-_#730_
+Write a program to simulate the first K moves that ant makes and print the final board as a grid.
+
+Note that you are not provided with the data structure to represent the grid. This is something you must design by yourself. The only input to your method is K. You should print the final grid and return nothing.
+The method signature might be something like void printKMoves(int k).

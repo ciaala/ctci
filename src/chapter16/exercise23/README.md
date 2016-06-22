@@ -1,8 +1,5 @@
-#16.15 Master Mind
-The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B).
-For example the computer might have a RGGB: slots #1 is red, Slots #2 and #3 are green and slot #4 is blue.
-You the user are trying to guess the solution. You might, for example, guess YRGB ...
-Write a method that, given a guess and a solution returns the number of hits and pseudo-hits.
+#16.23 Rand7 from Rand5
+Implement a method rand7() given rand5(). That is, given a method that generates a random number between 0 and 4 (inclusive), write a method that generates a random number between 0 and 6 (inclusive);
 
-_#693_
-_#730_
+## Naive
+(rand5() + rand5() + rand5() + rand5() + rand5() + rand5() + rand5()) / 7

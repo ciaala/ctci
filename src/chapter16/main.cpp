@@ -19,7 +19,11 @@ namespace exercise16_19 { void main(); }
 
 namespace exercise16_20 { void main(); }
 namespace exercise16_21 { void main(); }
-
+namespace exercise16_22 { void main(); }
+namespace exercise16_23 { void main(); }
+namespace exercise16_24 { void main(); }
+namespace exercise16_25 { void main(); }
+namespace exercise16_26 { void main(); }
 
 int main_chapter16(const int argc, const char **argv) {
     //exercise16_3::main();
@@ -36,7 +40,12 @@ int main_chapter16(const int argc, const char **argv) {
     //exercise16_17::main();
     //exercise16_18::main();
     //exercise16_19::main();
-    exercise16_20::main();
-    exercise16_21::main();
+    //exercise16_20::main();
+    //exercise16_21::main();
+    exercise16_22::main();
+    exercise16_23::main();
+    exercise16_24::main();
+    exercise16_25::main();
+    exercise16_26::main();
 
 }

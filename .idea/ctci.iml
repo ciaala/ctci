@@ -2,9 +2,14 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise20/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise24/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise5/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise7/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise20/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise21/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise22/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise25/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise19/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise18/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise17/main.cpp" isTestSource="false" />
@@ -17,9 +22,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise10/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise9/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise8/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise7/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise23/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise6/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise21/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise26/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise4/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise3/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/main.cpp" isTestSource="false" />
@@ -60,9 +65,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise1/SortedMerge.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise4/SortedSearchNoSize.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise4/Listy.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise4/SortedSearchNoSize.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise4/Listy.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter10/exercise4/Listy.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise56.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise52.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter5/exercise54.cpp" isTestSource="false" />
