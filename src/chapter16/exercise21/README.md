@@ -1,8 +1,16 @@
-#16.15 Master Mind
-The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B).
-For example the computer might have a RGGB: slots #1 is red, Slots #2 and #3 are green and slot #4 is blue.
-You the user are trying to guess the solution. You might, for example, guess YRGB ...
-Write a method that, given a guess and a solution returns the number of hits and pseudo-hits.
+#16.21 Sum Swap
+Given two arrays of integers, find the pair of values (one value from each array), that can swap to give the two arrays the same sum.
 
-_#693_
-_#730_
+
+## Brute Force
+Sort the arrays and sums
+sum_a
+sum_b
+
+(sum_a + sum_b) / 2 -> final_sum
+
+
+loop in a for elm_a
+    find in b elm_b: (final_sum == sum_b + elm_a - elm_b)
+                --> (elm_a + (final_sum - sum_b)) = elm_b
+-> couple

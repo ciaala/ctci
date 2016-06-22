@@ -17,6 +17,8 @@ namespace exercise16_17 { void main(); }
 namespace exercise16_18 { void main(); }
 namespace exercise16_19 { void main(); }
 
+namespace exercise16_20 { void main(); }
+namespace exercise16_21 { void main(); }
 
 
 int main_chapter16(const int argc, const char **argv) {
@@ -33,5 +35,8 @@ int main_chapter16(const int argc, const char **argv) {
     //exercise16_13::main();
     //exercise16_17::main();
     //exercise16_18::main();
-    exercise16_19::main();
+    //exercise16_19::main();
+    exercise16_20::main();
+    exercise16_21::main();
+
 }
