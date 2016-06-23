@@ -9,7 +9,7 @@ using namespace std;
 
 namespace exercise16_25 {
 
-
+    LRUEntry< >
 
     void main() {
 

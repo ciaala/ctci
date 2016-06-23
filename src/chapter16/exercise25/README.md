@@ -1,8 +1,5 @@
-#16.15 Master Mind
-The computer has four slots, and each slot will contain a ball that is red (R), yellow (Y), green (G) or blue (B).
-For example the computer might have a RGGB: slots #1 is red, Slots #2 and #3 are green and slot #4 is blue.
-You the user are trying to guess the solution. You might, for example, guess YRGB ...
-Write a method that, given a guess and a solution returns the number of hits and pseudo-hits.
+#16.25 LRU Cache
+Design and build a "least recently used" cache, which evicts the least recently used item.
 
-_#693_
-_#730_
+The cache should map from key to  value ( allows you to insert and retrieve a value associated with a particular key) and be initialized with a max size. When it is full it should evict the least recently used item. You can assume the keys are integers ad the values are strings.
+
