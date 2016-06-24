@@ -20,6 +20,27 @@ namespace exercise17_6 {
         }*/
     }
 
+    int constructiveCount2(int n, int decimalFigure) {
+        int count = 0;
+        int d = 10;
+        int exp_time = 1;
+        int x = n;
+        while (x > 0) {
+            int r = x % d;
+
+            count += r * (exp_time / 10);
+            if (r > decimalFigure)
+                count += exp_time;
+            else if (r == decimalFigure)
+                count += (n % exp_time) + 1;
+
+            exp_time = (exp_time+1) * 10;
+            cout << x << ": " << count << endl;
+            x /= d;
+        }
+        return count;
+    }
+
     int count2(int x) {
         int count = 0;
         for (int i = 0; i <= x; i++) {
@@ -34,7 +55,8 @@ namespace exercise17_6 {
     }
 
     void main() {
-        int input = 25;
+        int input = 2222222;
+        cout << input << ":" << constructiveCount2(input, 2) << endl;
         cout << input << ":" << count2(input) << endl;
     }
 
