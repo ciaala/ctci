@@ -9,7 +9,7 @@ set(SOURCE_FILES
         #        exercise3/main.cpp
         #        exercise4/main.cpp
                 exercise5/main.cpp
-        #        exercise6/main.cpp
+                exercise6/main.cpp
         #        exercise7/main.cpp
         #        exercise8/main.cpp
         #        exercise9/main.cpp
