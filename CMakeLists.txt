@@ -10,15 +10,15 @@ set(SOURCE_FILES
         src/chapter1/exercise1.cpp
 
         src/chapter3/main.cpp
-
-
-        )
+)
 add_subdirectory(src/chapter4)
 add_subdirectory(src/chapter5)
 add_subdirectory(src/chapter7)
 add_subdirectory(src/chapter10)
 add_subdirectory(src/chapter15)
 add_subdirectory(src/chapter16)
+add_subdirectory(src/chapter17)
+
 add_executable(ctci ${SOURCE_FILES})
 
 target_link_libraries(ctci LINK_PUBLIC
@@ -28,4 +28,5 @@ target_link_libraries(ctci LINK_PUBLIC
         chapter10
         chapter15
         chapter16
+        chapter17
         ${CMAKE_THREAD_LIBS_INIT})
