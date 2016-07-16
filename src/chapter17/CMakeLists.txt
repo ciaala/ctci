@@ -10,13 +10,13 @@ set(SOURCE_FILES
         #        exercise4/main.cpp
                 exercise5/main.cpp
                 exercise6/main.cpp
-        #        exercise7/main.cpp
+        #        exercise10/main.cpp
         #        exercise8/main.cpp
         #        exercise9/main.cpp
         #
         #        exercise10/main.cpp
         #        exercise11/main.cpp
-        #        exercise12/main.cpp
+                exercise12/main.cpp
         #        exercise13/main.cpp
         #        exercise14/main.cpp
         #        exercise15/main.cpp

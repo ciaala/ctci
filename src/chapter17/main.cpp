@@ -35,15 +35,15 @@ int main_chapter17(const int argc, const char **argv) {
     //exercise17_2::main();
     //exercise17_3::main();
     //exercise17_4::main();
-//    exercise17_5::main();
-    exercise17_6::main();
+    //exercise17_5::main();
+    //exercise17_6::main();
     //exercise17_7::main();
     //exercise17_8::main();
     //exercise17_9::main();
 
     //exercise17_10::main();
     //exercise17_11::main();
-    //exercise17_12::main();
+    exercise17_12::main();
     //exercise17_13::main();
     //exercise17_14::main();
     //exercise17_15::main();
