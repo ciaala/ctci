@@ -1,4 +1,4 @@
-#17.2 BiNode
+#17.12 BiNode
 Consider a simple data structure called BiNode, which has pointers to two other nodes :
 
 public class BiNode {

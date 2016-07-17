@@ -17,7 +17,7 @@ set(SOURCE_FILES
         #        exercise10/main.cpp
         #        exercise11/main.cpp
                 exercise12/main.cpp
-        #        exercise13/main.cpp
+                exercise13/main.cpp
         #        exercise14/main.cpp
         #        exercise15/main.cpp
         #        exercise16/main.cpp
