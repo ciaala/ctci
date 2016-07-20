@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 
 using namespace std;
 
@@ -12,6 +13,9 @@ using namespace std;
 namespace exercise17_13 {
 #define myassert(a, b) __myassert(#a, a, b)
 
+    /**
+     * DocumentRespaceSolution
+     */
     class DocumentRespaceSolution {
 
     public:
@@ -23,12 +27,24 @@ namespace exercise17_13 {
         const string &document;
         unordered_map<unsigned long, const string &> words;
         unsigned int freeSpace;
+
+        friend ostream &operator<<(ostream &ost, const DocumentRespaceSolution &solution) {
+            ost << "space: " << freeSpace << ", document: ";
+            vector<unsigned long> positions = vector<unsigned long>(solution.words.begin(), solution.words.end());
+
+            return ost;
+        }
     };
 
+    /**
+     * DocumentRespace
+     */
     class DocumentRespace {
         const vector<string> &dictionary;
 
         static const string SNONE;
+        bool debug;
+
     private:
         string getNext(string word) {
 
@@ -87,12 +103,29 @@ namespace exercise17_13 {
         string respace(const string &document) {
             int spaces = INT32_MAX;
             DocumentRespaceSolution *solution = new DocumentRespaceSolution(document);
-            // DocumentRespaceSolution *best;
-            while () {
+            DocumentRespaceSolution *best;
+            bool solutionIsLast = false;
+            while (spaces != 0 && !solutionIsLast) {
+
                 buildSolution(solution);
-                spaces = solution->freeSpace;
+                if (debug) {
+                    cout << solution << endl;
+                }
+                if (spaces > solution->freeSpace) {
+                    best = solution;
+                    spaces = best->freeSpace;
+                }
+                solutionIsLast = solution != nullptr;
             }
             return "";
+        }
+
+        bool isDebug() const {
+            return debug;
+        }
+
+        void setDebug(bool debug) {
+            DocumentRespace::debug = debug;
         }
 
     };
