@@ -12,10 +12,10 @@ using namespace std;
 namespace exercise17_13 {
 #define myassert(a, b) __myassert(#a, a, b)
 
-    class StringRespaceSolution {
+    class DocumentRespaceSolution {
 
     public:
-        StringRespaceSolution(const string &document)
+        DocumentRespaceSolution(const string &document)
                 : document(document), freeSpace(0) {
 
         }
@@ -25,7 +25,7 @@ namespace exercise17_13 {
         unsigned int freeSpace;
     };
 
-    class StringRespace {
+    class DocumentRespace {
         const vector<string> &dictionary;
 
         static const string SNONE;
@@ -34,7 +34,7 @@ namespace exercise17_13 {
 
         }
 
-        void buildSolution(StringRespaceSolution *solution, unsigned long position = 0) {
+        void buildSolution(DocumentRespaceSolution *solution, unsigned long position = 0) {
             solution->freeSpace = 0;
 
             while (position < solution->document.length()) {
@@ -64,7 +64,7 @@ namespace exercise17_13 {
             }
         }
 
-        const string &lookForWord(StringRespaceSolution *solution, unsigned long position, unsigned long length) {
+        const string &lookForWord(DocumentRespaceSolution *solution, unsigned long position, unsigned long length) {
 
             string prefix = solution->document.substr(position, length);
             for (const string &s: dictionary) {
@@ -77,7 +77,7 @@ namespace exercise17_13 {
 
     public:
 
-        StringRespace(
+        DocumentRespace(
                 const vector<string> &dictionary) :
                 dictionary(dictionary) {
 
@@ -86,9 +86,9 @@ namespace exercise17_13 {
 
         string respace(const string &document) {
             int spaces = INT32_MAX;
-            StringRespaceSolution *solution = new StringRespaceSolution(document);
-            // StringRespaceSolution *best;
-            while (spaces > 0) {
+            DocumentRespaceSolution *solution = new DocumentRespaceSolution(document);
+            // DocumentRespaceSolution *best;
+            while () {
                 buildSolution(solution);
                 spaces = solution->freeSpace;
             }
@@ -97,12 +97,12 @@ namespace exercise17_13 {
 
     };
 
-    const string StringRespace::SNONE = "";
+    const string DocumentRespace::SNONE = "";
 
     void main() {
         const vector<string> dictionary = {"i", "love", "maccheroni", "pasta", "pastaasciutta", "pazza", "pizza"};
         string document = "ilovepastasciuttamorethanpizza";
-        StringRespace sr(dictionary);
+        DocumentRespace sr(dictionary);
         cout << sr.respace(document);
     }
 
