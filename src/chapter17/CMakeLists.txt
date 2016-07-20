@@ -18,6 +18,8 @@ set(SOURCE_FILES
         #        exercise11/main.cpp
                 exercise12/main.cpp
                 exercise13/main.cpp
+                exercise13/Trine.cpp
+                exercise13/Trine.h
         #        exercise14/main.cpp
         #        exercise15/main.cpp
         #        exercise16/main.cpp
