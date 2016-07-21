@@ -25,12 +25,28 @@ namespace exercise17_13 {
         }
 
         const string &document;
-        unordered_map<unsigned long, const string &> words;
+        unordered_map<unsigned long, string> words;
         unsigned int freeSpace;
 
         friend ostream &operator<<(ostream &ost, const DocumentRespaceSolution &solution) {
-            ost << "space: " << solution.freeSpace << ", document: ";
-            vector<unsigned long> positions = vector<unsigned long>(solution.words.begin(), solution.words.end());
+            ost << "DocumentRespaceSolution{ " << endl;
+            ost << "\tspace: " << solution.freeSpace << "," << endl;
+            ost << "\tdocument: " << solution.document << "," << endl;
+            vector<unsigned long> positions;
+            positions.reserve(solution.words.size());
+            for_each(solution.words.begin(), solution.words.end(),
+                     [&positions](auto &item) {
+                         positions.emplace_back(item.first);
+
+                     });
+            sort_heap(positions.begin(), positions.end());
+            for_each(positions.begin(), positions.end(),
+                     [&](auto &item) {
+                         string &match = solution.words[item];
+                         ost << "\t" << item << ": " << match << endl;
+                     });
+
+            ost << "}" << endl;
 
             return ost;
         }
@@ -67,7 +83,7 @@ namespace exercise17_13 {
                     nextWord = lookForWord(solution, position, length);
                     if (nextWord.length() > 0) {
                         cout << position << ": " << nextWord << endl;
-                        solution->words.emplace(position, nextWord);
+                        solution->words[position] = nextWord;
                         position += nextWord.length();
                         break;
                     }
@@ -93,8 +109,7 @@ namespace exercise17_13 {
 
     public:
 
-        DocumentRespace(
-                const vector<string> &dictionary) :
+        DocumentRespace(const vector<string> &dictionary) :
                 dictionary(dictionary) {
 
         }
@@ -108,12 +123,13 @@ namespace exercise17_13 {
             while (spaces != 0 && !solutionIsLast) {
 
                 buildSolution(solution);
-                if (debug) {
-                    cout << solution << endl;
-                }
+
                 if (spaces > solution->freeSpace) {
                     best = solution;
                     spaces = best->freeSpace;
+                    if (debug) {
+                        cout << *solution << endl;
+                    }
                 }
                 solutionIsLast = solution != nullptr;
             }
@@ -136,7 +152,7 @@ namespace exercise17_13 {
         const vector<string> dictionary = {"i", "love", "maccheroni", "pasta", "pastaasciutta", "pazza", "pizza"};
         string document = "ilovepastasciuttamorethanpizza";
         DocumentRespace sr(dictionary);
-        cout << sr.respace(document);
+        cout << sr.respace(document) << endl;
     }
 
 }
