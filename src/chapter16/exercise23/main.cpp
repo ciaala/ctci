@@ -36,7 +36,7 @@ namespace exercise16_23 {
 
     void main() {
         //srand(time(NULL));
-        int rand_i = 7;
+        const int rand_i = 7;
         unsigned count[rand_i] = {0};
         unsigned rep = (1 << 26);
         if (rand_i == 7) {

@@ -29,7 +29,7 @@ namespace exercise17_13 {
         unsigned int freeSpace;
 
         friend ostream &operator<<(ostream &ost, const DocumentRespaceSolution &solution) {
-            ost << "space: " << freeSpace << ", document: ";
+            ost << "space: " << solution.freeSpace << ", document: ";
             vector<unsigned long> positions = vector<unsigned long>(solution.words.begin(), solution.words.end());
 
             return ost;
