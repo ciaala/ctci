@@ -5,7 +5,7 @@
 
 #include "DocumentRespaceAlgorithm.h"
 #include "DocumentRespaceSolution.h"
-#include <queue>
+#include <stack>
 #include <sstream>
 
 namespace exercise17_13 {
@@ -41,30 +41,43 @@ namespace exercise17_13 {
             */
 
         DocumentRespaceSolution *solution = new DocumentRespaceSolution(document, dictionary);
-        queue<DocumentRespaceSolution *> solutions;
+        DocumentRespaceSolution *best = nullptr;
+        stack<DocumentRespaceSolution *> solutions;
         solutions.push(solution);
         // while there are more
         // while the
-        //      front most solution is not at maximum length
-        //      front most solution is not at freeSpace 0
-        while (!solutions.empty() &&
-               (solutions.front()->getPosition() != 30 || solutions.front()->getFreeSpace() != 0)) {
-            solution = solutions.front();
-            solution->branch();
-
-            cout << "Adding " << solution->getChildren().size() << "branches" << endl;
-            for_each(solution->getChildren().begin(), solution->getChildren().end(),
-                     [&solutions](auto item) {
-                         solutions.push(item.second);
-                     }
-            );
-
-            cout << "Analyzed: " << *solution;
+        //      best solution is not at maximum length
+        //      best most solution is not at freeSpace 0
+        while (!solutions.empty() && (best == nullptr || (best->getFreeSpace() > 0))) {
+            solution = solutions.top();
             solutions.pop();
 
+            if ((solution->getPosition() == document.length()) &&
+                (best == nullptr || best->getFreeSpace() > solution->getFreeSpace())) {
+                best = solution;
+            } else {
+                solution->branch();
+                // cout << "Adding " << solution->getChildren().size() << " branches" << endl;
+                if (best == nullptr) {
+                    for_each(solution->getChildren().begin(), solution->getChildren().end(),
+                             [&solutions](auto item) {
+                                 solutions.push(item.second);
+                             });
+                } else {
+                    for_each(solution->getChildren().begin(), solution->getChildren().end(),
+                             [&solutions, &best](auto item) {
+                                 if (item.second->getFreeSpace() < best->getFreeSpace()) {
+                                     solutions.push(item.second);
+                                 }
+                             });
+                }
+            }
         }
         ostringstream ost;
-        ost << *solution;
+        if (best != nullptr) {
+            ost << *best;
+        }
         return ost.str();
     }
+
 }

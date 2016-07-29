@@ -18,8 +18,8 @@ namespace exercise17_13 {
                 //const string &str = dictionary.at(i);
                 const string *str = &dictionary.at(i);
                 //unsigned long length = str.length();
-                unsigned long length = str->length();
-                if (length < diff && document.compare(position, length, *str) == 0) {
+                unsigned long long length = str->length();
+                if (length <= diff && document.compare(position, length, *str) == 0) {
 
                     DocumentRespaceSolution *branch = duplicate(str);
                     /*
@@ -33,11 +33,15 @@ namespace exercise17_13 {
                     //position += length;
                 }
             }
-            if (position < document.length()) {
+            if (position <= document.length()) {
+
                 string skip_character(1, document.at(position));
+
+
                 const string *str = &skip_character;
+                cout << "Skipping: { pos: " << position << ", str: " << *str << " }" << endl;
                 DocumentRespaceSolution *branch = duplicate();
-                branch->position = position + 1;
+                branch->position = this->getPosition() + 1;
                 /*
                     new DocumentRespaceSolution(document, dictionary);
                     branch->words.insert(this->words.begin(), this->words.end());
