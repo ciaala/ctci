@@ -14,9 +14,12 @@ namespace exercise17_13 {
 
 
     void main() {
-        const vector<string> dictionary = {"i", "love", "maccheroni", "pasta", "pastaasciutta", "pazza", "pizza",
-                                           "more", "than", "asciutta"};
-        string document = "ilovepastasciuttamorethanpizza";
+            //const vector<string> dictionary = {"i", "love", "maccheroni", "pasta", "pastaasciutta", "pazza", "pizza", "more", "than", "asciutta"};
+            //string document = "ilovepastasciuttamorethanpizza";
+
+            const vector<string> dictionary = {"looked", "just", "like", "her", "brother"};
+            string document = "jesslookedjustliketimherbrother";
+
         //string document = "iai";
         DocumentRespaceAlgorithm algorithm(dictionary);
         string result = algorithm.respace(document);
