@@ -17,9 +17,18 @@ set(SOURCE_FILES
         #        exercise10/main.cpp
         #        exercise11/main.cpp
                 exercise12/main.cpp
+
+        #
+
                 exercise13/main.cpp
                 exercise13/Trine.cpp
                 exercise13/Trine.h
+                exercise13/DocumentRespaceSolution.cpp
+                exercise13/DocumentRespaceSolution.h
+                exercise13/DocumentRespaceAlgorithm.cpp
+                exercise13/DocumentRespaceAlgorithm.h
+
+
         #        exercise14/main.cpp
         #        exercise15/main.cpp
         #        exercise16/main.cpp
@@ -35,7 +44,7 @@ set(SOURCE_FILES
         #        exercise25/main.cpp
         #        exercise26/main.cpp
 
-        )
+)
 
 
 add_library(${LIBRARY_NAME} ${SOURCE_FILES})
