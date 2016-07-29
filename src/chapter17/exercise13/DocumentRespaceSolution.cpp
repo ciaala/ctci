@@ -28,7 +28,7 @@ namespace exercise17_13 {
                         branch->words.emplace(this->position, str);
                         branch->position = this->position + length;
                      */
-                    cout << "Emplacing: { pos: " << position << ", str: " << *str << " }" << endl;
+                    //    cout << "Emplacing: { pos: " << position << ", str: " << *str << " }" << endl;
                     this->children.emplace(str, branch);
                     //position += length;
                 }
@@ -39,7 +39,7 @@ namespace exercise17_13 {
 
 
                 const string *str = &skip_character;
-                cout << "Skipping: { pos: " << position << ", str: " << *str << " }" << endl;
+                //    cout << "Skipping: { pos: " << position << ", str: " << *str << " }" << endl;
                 DocumentRespaceSolution *branch = duplicate();
                 branch->position = this->getPosition() + 1;
                 /*
@@ -96,6 +96,7 @@ namespace exercise17_13 {
         solution->words.insert(this->words.begin(), this->words.end());
         if (str != nullptr) {
             solution->words.emplace(this->position, *str);
+            solution->freeSpace = this->getFreeSpace();
             solution->position = this->position + str->length();
         }
         return solution;
