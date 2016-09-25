@@ -1,6 +1,2 @@
-# 1.5 One Away
-Given two strings find out if they are one or zero edit operation away.
-The edit operation is:
-- replace
-- remove
-- insert
+# 1.7 Rotate Matrix 90'
+Given a matrix made of 4 bytes large cells, rotate it in place by 90'

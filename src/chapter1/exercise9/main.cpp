@@ -11,65 +11,29 @@
 using namespace std;
 namespace exercise1_9 {
 
+    bool isSubstring(string &first, string &second) {
+        unsigned long pos = first.find(second);
+        return (pos >= 0) && (pos < second.length());
+    }
 
-    string isZeroOneEditAway(string &first, string &second) {
-        bool isInsert = false;
-        bool isRemove = false;
-        bool isReplace = false;
-        bool differentMoreOperations = false;
-        unsigned long diffPosition = 0;
-        unsigned long scan = 0;
-        while (scan < first.length()) {
-            if (first[scan] != second[scan]) {
-                diffPosition = scan;
-                unsigned long remaining = first.length() - scan - 1;
-                unsigned long firstScan = scan;
-                unsigned long secondScan = scan;
-                if (first.length() < second.length()) {
-                    isRemove = true;
-                    secondScan++;
-                } else if (first.length() > second.length()) {
-                    isInsert = true;
-                    firstScan++;
-                } else {
-                    isReplace = true;
-                    firstScan++;
-                    secondScan++;
-                }
-                differentMoreOperations = first.compare(firstScan, remaining, second, secondScan, remaining) != 0;
-                scan = first.length();
-            } else {
-                scan++;
-            }
+    bool isStringRotation(string &first, string &second) {
+        if (first.length() != second.length()) {
+            return false;
+        }
 
-        }
-        stringstream result;
-        if (!differentMoreOperations) {
-            if (isInsert) {
-                result << "INSERT at " << diffPosition << " '" << first[diffPosition] << "'";
-            } else if (isRemove) {
-                result << "REMOVE at " << diffPosition << " '" << second[diffPosition] << "'";
-            } else if (isReplace) {
-                result << "REPLACE at " << diffPosition << " '" <<
-                       first[diffPosition] << "' -> '" << second[diffPosition] << "'";
-            } else {
-                result << "EQUALS";
-            }
-        } else {
-            result << "DIFF";
-        }
-        return result.str();
+        string concatenation = second + second;
+        return isSubstring(concatenation, first);
     }
 
     void printResult(string &first, string &second) {
-        cout << "(isZeroOneEditAway '" << first << "' '" << second << "') -> "
-             << isZeroOneEditAway(first, second)  << endl;
+        cout << "\t(isStringRotation '" << first << "' '" << second << "') -> "
+             << isStringRotation(first, second) << endl;
     }
 
     void main() {
-        vector<string> texts = {"pippo", "noidelmar", "fika", "vika", "icika", "cika" , "ivika", "geronimo", "maredinol"};
+        vector<string> texts = {"pippp", "ipppp", "ppppi", "pppip", "piaaappp", "iaaappp", "aaapppi", "aapppia"};
         //
-        cout << "isZeroOneEditAway( string, string )" << endl;
+        cout << "isStringRotation( string, string )" << endl;
         for (int i = 0; i < texts.size(); i++) {
             for (int j = i; j < texts.size(); j++) {
                 printResult(texts[i], texts[j]);

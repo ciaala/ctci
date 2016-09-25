@@ -1,3 +1,5 @@
+SET(CMAKE_BUILD_TYPE Debug)
+
 SET( SOURCE_FILES
         main.cpp
         exercise1/main.cpp
