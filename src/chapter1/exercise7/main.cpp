@@ -2,10 +2,7 @@
 // Created by Francesco Fiduccia on 24/09/16.
 //
 #include <string>
-#include <unordered_map>
 #include <iostream>
-#include <vector>
-#include <sstream>
 
 
 using namespace std;
@@ -17,9 +14,6 @@ namespace exercise1_7 {
             return false;
         }
 
-        // int xSection = sizeX / 2;
-        // int ySection = sizeY / 2;
-        int halfSize = sizeX / 2;
         int size = sizeX - 1;
         for (int r = 0; r < size ; r++) {
             for (int o = r; o < size - r ; o++) {
@@ -62,6 +56,7 @@ namespace exercise1_7 {
                 }
             }
         }
+        return true;
     }
 
     template<int sizeX, int sizeY>

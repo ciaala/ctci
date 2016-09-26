@@ -11,6 +11,7 @@ set(SOURCE_FILES
         src/chapter3/main.cpp
         )
 add_subdirectory(src/chapter1)
+add_subdirectory(src/chapter2)
 add_subdirectory(src/chapter4)
 add_subdirectory(src/chapter5)
 add_subdirectory(src/chapter7)
@@ -23,6 +24,7 @@ add_executable(ctci ${SOURCE_FILES})
 
 target_link_libraries(ctci LINK_PUBLIC
         chapter1
+        chapter2
         chapter4
         chapter5
         chapter7
