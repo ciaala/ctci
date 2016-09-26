@@ -6,10 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/Trine.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/DocumentRespaceSolution.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/DocumentRespaceAlgorithm.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/Trine.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/DocumentRespaceSolution.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/Trine.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/DocumentRespaceAlgorithm.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise13/DocumentRespaceAlgorithm.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise12/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise6/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter17/exercise5/main.cpp" isTestSource="false" />
@@ -42,13 +42,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter16/exercise10/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Seat.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Philosopher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Table.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Philosopher.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Seat.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Table.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Table.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Chopstick.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Philosopher.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise3/Chopstick.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter15/exercise7/main.cpp" isTestSource="false" />

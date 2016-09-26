@@ -13,7 +13,9 @@ namespace exercise1_8 {
 
     template<int sizeX, int sizeY>
     void cleanRowColumn(int (&matrix)[sizeX][sizeY]) {
-        if (sizeX)
+        if (sizeX == 0 && sizeY == 0) {
+            return;
+        }
         bool columnsToClean[sizeX] = {false};
         bool rowsToClean[sizeY] = {false};
         for (int i = 0; i < sizeX; i++) {
@@ -33,8 +35,8 @@ namespace exercise1_8 {
             }
         }
         for (int j = 0; j < sizeY; j++) {
-            if (rowsToClean[j] ) {
-                for (int i=0; i < sizeX; i++) {
+            if (rowsToClean[j]) {
+                for (int i = 0; i < sizeX; i++) {
                     matrix[i][j] = 0;
                 }
             }
@@ -58,22 +60,29 @@ namespace exercise1_8 {
     void printResult(int (&matrix)[sizeX][sizeY]) {
         cout << "(cleanRowColumn '";
         cout << sizeX << "][" << sizeY << "]) -> " << endl;
-        printMatrix, cout, matrix);
+        printMatrix(cout, matrix);
         cleanRowColumn(matrix);
         printMatrix(cout, matrix);
 
     }
 
     void main() {
-        vector<string> texts = {"pippo", "noidelmar", "fika", "vika", "icika", "cika", "ivika", "geronimo",
-                                "maredinol"};
+        int matrix2x2[2][2] = {{1, 2},
+                               {3, 4}};
+        int matrix3x3[3][3] = {{0, 1, 2},
+                               {3, 4, 5},
+                               {6, 7, 8}};
+        int matrix1[5][5] = {{0,  1,  2,  3,  4},
+                             {5,  6,  7,  8,  9},
+                             {10, 11, 0, 13, 14},
+                             {15, 16, 17, 0, 19},
+                             {20, 21, 22, 23, 24},
+        };
         //
         cout << "cleanRowColumn( matrix )" << endl;
-        for (int i = 0; i < texts.size(); i++) {
-            for (int j = i; j < texts.size(); j++) {
-                printResult(texts[i], texts[j]);
-            }
-        }
+        printResult(matrix2x2);
+        printResult(matrix3x3);
+        printResult(matrix1);
         cout << endl;
     }
 }
