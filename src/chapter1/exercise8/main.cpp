@@ -11,65 +11,64 @@
 using namespace std;
 namespace exercise1_8 {
 
-
-    string isZeroOneEditAway(string &first, string &second) {
-        bool isInsert = false;
-        bool isRemove = false;
-        bool isReplace = false;
-        bool differentMoreOperations = false;
-        unsigned long diffPosition = 0;
-        unsigned long scan = 0;
-        while (scan < first.length()) {
-            if (first[scan] != second[scan]) {
-                diffPosition = scan;
-                unsigned long remaining = first.length() - scan - 1;
-                unsigned long firstScan = scan;
-                unsigned long secondScan = scan;
-                if (first.length() < second.length()) {
-                    isRemove = true;
-                    secondScan++;
-                } else if (first.length() > second.length()) {
-                    isInsert = true;
-                    firstScan++;
-                } else {
-                    isReplace = true;
-                    firstScan++;
-                    secondScan++;
+    template<int sizeX, int sizeY>
+    void cleanRowColumn(int (&matrix)[sizeX][sizeY]) {
+        if (sizeX)
+        bool columnsToClean[sizeX] = {false};
+        bool rowsToClean[sizeY] = {false};
+        for (int i = 0; i < sizeX; i++) {
+            for (int j = 0; j < sizeY; j++) {
+                if (matrix[i][j] == 0) {
+                    columnsToClean[i] = true;
+                    rowsToClean[j] = true;
                 }
-                differentMoreOperations = first.compare(firstScan, remaining, second, secondScan, remaining) != 0;
-                scan = first.length();
-            } else {
-                scan++;
             }
+        }
 
-        }
-        stringstream result;
-        if (!differentMoreOperations) {
-            if (isInsert) {
-                result << "INSERT at " << diffPosition << " '" << first[diffPosition] << "'";
-            } else if (isRemove) {
-                result << "REMOVE at " << diffPosition << " '" << second[diffPosition] << "'";
-            } else if (isReplace) {
-                result << "REPLACE at " << diffPosition << " '" <<
-                       first[diffPosition] << "' -> '" << second[diffPosition] << "'";
-            } else {
-                result << "EQUALS";
+        for (int i = 0; i < sizeX; i++) {
+            if (columnsToClean[i]) {
+                for (int j = 0; j < sizeY; j++) {
+                    matrix[i][j] = 0;
+                }
             }
-        } else {
-            result << "DIFF";
         }
-        return result.str();
+        for (int j = 0; j < sizeY; j++) {
+            if (rowsToClean[j] ) {
+                for (int i=0; i < sizeX; i++) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
     }
 
-    void printResult(string &first, string &second) {
-        cout << "(isZeroOneEditAway '" << first << "' '" << second << "') -> "
-             << isZeroOneEditAway(first, second)  << endl;
+    template<int sizeX, int sizeY>
+    void printMatrix(ostream &out, int (&matrix)[sizeX][sizeY]) {
+
+        for (int x = 0; x < sizeX; x++) {
+            for (int y = 0; y < sizeY; y++) {
+                out.width(3);
+                out << matrix[x][y];
+            }
+            out << endl;
+        }
+        out << endl;
+    }
+
+    template<int sizeX, int sizeY>
+    void printResult(int (&matrix)[sizeX][sizeY]) {
+        cout << "(cleanRowColumn '";
+        cout << sizeX << "][" << sizeY << "]) -> " << endl;
+        printMatrix, cout, matrix);
+        cleanRowColumn(matrix);
+        printMatrix(cout, matrix);
+
     }
 
     void main() {
-        vector<string> texts = {"pippo", "noidelmar", "fika", "vika", "icika", "cika" , "ivika", "geronimo", "maredinol"};
+        vector<string> texts = {"pippo", "noidelmar", "fika", "vika", "icika", "cika", "ivika", "geronimo",
+                                "maredinol"};
         //
-        cout << "isZeroOneEditAway( string, string )" << endl;
+        cout << "cleanRowColumn( matrix )" << endl;
         for (int i = 0; i < texts.size(); i++) {
             for (int j = i; j < texts.size(); j++) {
                 printResult(texts[i], texts[j]);
