@@ -96,6 +96,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/chapter4/GraphNode.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter3/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter2/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/chapter2/library/ListDecorator.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter2/exercise9/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter2/exercise8/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/chapter2/exercise7/main.cpp" isTestSource="false" />

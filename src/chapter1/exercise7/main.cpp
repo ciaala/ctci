@@ -107,7 +107,7 @@ namespace exercise1_7 {
         cout << "rotate( int matrix[][])" << endl;
         /*for (int i = 0; i < texts.size(); i++) {
             for (int j = i; j < texts.size(); j++) {
-            //    printResult(texts[i], texts[j]);
+            //    run(texts[i], texts[j]);
             }
         }
          */
