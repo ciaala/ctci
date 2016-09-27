@@ -15,9 +15,9 @@ using namespace std;
 
 template<typename T>
 class ListDecorator {
-private :
-    string name;
 
+protected:
+    string name;
 public:
     ListDecorator(string name) : name(name) {}
 
@@ -36,7 +36,7 @@ public:
         out << ")[" << container.size() << "]";
     }
 
-    void run(list<T> &container) {
+    virtual void run(list<T> &container) {
         cout << "(" << this->name << " ";
         printList(cout, container);
         cout << ")" << endl;
