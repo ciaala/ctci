@@ -16,7 +16,8 @@ namespace exercise2_9 { void main(); };
 
 int main_chapter2(const int argc, const char **argv) {
     exercise2_1::main();
-    /*exercise2_2::main();
+    exercise2_2::main();
+    /*
     exercise2_3::main();
     exercise2_4::main();
     exercise2_5::main();
