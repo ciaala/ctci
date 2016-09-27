@@ -24,6 +24,7 @@ public:
     virtual void execute(list<T> &container) = 0;
 
     void printList(ostream &out, list<T> &container) {
+        out << "(";
         for (auto it = container.cbegin();
              it != container.cend();
              it++) {
@@ -32,6 +33,7 @@ public:
                 out << ", ";
             }
         }
+        out << ")[" << container.size() << "]";
     }
 
     void run(list<T> &container) {
@@ -39,9 +41,9 @@ public:
         printList(cout, container);
         cout << ")" << endl;
         execute(container);
-        cout << " -> (";
+        cout << " -> ";
         printList(cout, container);
-        cout << ")" << endl;
+        cout << endl;
     }
 
 
