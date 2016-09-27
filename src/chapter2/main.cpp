@@ -20,8 +20,8 @@ int main_chapter2(const int argc, const char **argv) {
 
     exercise2_4::main();
     exercise2_5::main();
+    exercise2_6::main();
     /*
-      exercise2_6::main();
       exercise2_7::main();
       exercise2_8::main();
       exercise2_9::main();

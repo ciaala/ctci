@@ -38,11 +38,12 @@ public:
 
     virtual void run(list<T> &container) {
         cout << "(" << this->name << " ";
-        printList(cout, container);
+        this->printList(cout, container);
         cout << ")" << endl;
-        execute(container);
+        this->execute(container);
+
         cout << " -> ";
-        printList(cout, container);
+        this->printList(cout, container);
         cout << endl;
     }
 
