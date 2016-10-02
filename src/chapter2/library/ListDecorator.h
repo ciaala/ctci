@@ -23,7 +23,7 @@ public:
 
     virtual void execute(list<T> &container) = 0;
 
-    void printList(ostream &out, list<T> &container) {
+    virtual void printList(ostream &out, list<T> &container) {
         out << "(";
         for (auto it = container.cbegin();
              it != container.cend();
