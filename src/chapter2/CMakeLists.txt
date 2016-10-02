@@ -10,7 +10,7 @@ SET( SOURCE_FILES
         exercise6/main.cpp
         exercise7/main.cpp
         exercise8/main.cpp
-        exercise9/main.cpp
+
         library/ListDecorator.h library/LinkedList.h)
 add_library(chapter2 ${SOURCE_FILES})
 target_include_directories(chapter2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

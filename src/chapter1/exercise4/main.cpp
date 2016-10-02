@@ -18,8 +18,8 @@ namespace exercise1_4 {
         for (auto it = value.cbegin();
              it != value.cend();
              it++) {
-            if (oddChars[*it]) {
-                oddChars[*it] = false;
+            if (oddChars[(unsigned) *it]) {
+                oddChars[(unsigned) *it] = false;
                 countOdd -= 1;
             } else {
                 oddChars[*it] = true;
@@ -37,11 +37,11 @@ namespace exercise1_4 {
     }
 
     void main() {
-        vector<string> texts = {"pippo", "noidelmar", "fika", "vika", "cika", "geronimo", "maredinol", "salemales", "p", "pp",
-                                "in girum imus nocte et consumimur igni", "a man a canal a plan panama"};
+        vector<std::string> texts = {"pippo", "noidelmar", "fika", "vika", "cika", "geronimo", "maredinol", "salemales",
+                                     "p", "pp", "in girum imus nocte et consumimur igni", "a man a canal a plan panama"};
         //
         cout << "isPalindromePermutation( string )" << endl;
-        for (int i = 0; i < texts.size(); i++) {
+        for (unsigned i = 0; i < texts.size(); i++) {
             printResult(texts[i]);
         }
         cout << endl;

@@ -9,16 +9,16 @@
 using namespace std;
 namespace exercise1_3 {
 
-    string& urlify(pair<string, int> &input) {
-        string &value = input.first;
-        int length = input.second ;
+    string &urlify(pair<string, int> &input) {
+        string & value = input.first;
+        int length = input.second;
 
-        for (int index = value.size()-1,
-                    scan = length-1;
-                    index >= 0 && scan >= 0;
-                    index--, scan--) {
+        for (int index = value.size() - 1,
+                     scan = length - 1;
+             index >= 0 && scan >= 0;
+             index--, scan--) {
 
-            if ( value[scan] == ' ' ) {
+            if (value[scan] == ' ') {
                 value[index] = '0';
                 value[--index] = '2';
                 value[--index] = '%';
@@ -41,7 +41,7 @@ namespace exercise1_3 {
                                            {"you know nothing john snow        ", 26}};
         //
         cout << "urlify( string )" << endl;
-        for (int i = 0; i < texts.size(); i++) {
+        for (unsigned i = 0; i < texts.size(); i++) {
             printResult(texts[i]);
         }
         cout << endl;
