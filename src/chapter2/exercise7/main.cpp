@@ -4,7 +4,7 @@
 
 using namespace std;
 using namespace library;
-namespace exercise2_6 {
+namespace exercise2_7 {
 
     template<typename T>
     class IntersectionChecker : public LinkedListRunner<T> {
@@ -21,7 +21,10 @@ namespace exercise2_6 {
 
     void main() {
 
-        LinkedListNode<unsigned> first;
+        LinkedListNode<unsigned> first(3);
+        first.setNext(new LinkedListNode<unsigned>(5));
+        first.getNext()->setPrev(new LinkedListNode<unsigned>(7));
+        first.getNext()->setNext(new LinkedListNode<unsigned>(9));
         IntersectionChecker<unsigned> checker = IntersectionChecker<unsigned>();
         checker.run(first);
     }

@@ -15,14 +15,17 @@ namespace library {
     class LinkedListNode {
     private:
         LinkedListNode *next, *prev;
+        T value;
+
     public:
-        LinkedListNode(LinkedListNode<T> *next,
+        LinkedListNode(T value,
+                       LinkedListNode<T> *next,
                        LinkedListNode<T> *prev)
-                : next(next), prev(prev) {
+                : value(value), next(next), prev(prev) {
 
         }
 
-        LinkedListNode() : next(nullptr), prev(nullptr) {
+        LinkedListNode(T value) : value(value), next(nullptr), prev(nullptr) {
 
         }
 
@@ -53,9 +56,23 @@ namespace library {
         }
 
         unsigned size() {
-            unsigned int
-            return;
+            unsigned int size = 0;
+            LinkedListNode<T> *current = this;
+            while (current != nullptr) {
+                current = current->next;
+                size++;
+            }
+            return size;
         }
+
+        T getValue() const {
+            return value;
+        }
+
+        void setValue(T value) {
+            LinkedListNode::value = value;
+        }
+
     };
 
     template<typename T>
@@ -68,12 +85,14 @@ namespace library {
         virtual void execute(LinkedListNode<T> &container) = 0;
 
         virtual void printList(ostream &out, LinkedListNode<T> &container) {
+            LinkedListNode<T> *current = &container;
             out << "(";
-            while (container.hasNext()) {
-                out << container.getNext();
-                if (container.hasNext()) {
+            while (current) {
+                out << current->getValue();
+                if (current->hasNext()) {
                     out << ", ";
                 }
+                current = current->getNext();
             }
             out << ")[" << container.size() << "]";
         }
