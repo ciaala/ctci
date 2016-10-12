@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
-
-project(ctci)
 SET(CMAKE_BUILD_TYPE Debug)
-SET(CMAKE_VERBOSE_MAKEFILE true)
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall")
+project(ctci)
+
+#SET(CMAKE_VERBOSE_MAKEFILE true)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g -o0")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -g -o0")
 find_package(Threads)
 set(SOURCE_FILES
@@ -22,7 +22,7 @@ add_subdirectory(src/chapter17)
 
 add_executable(ctci ${SOURCE_FILES})
 
-target_link_libraries(ctci LINK_PUBLIC
+target_link_libraries(ctci LINK_PUBLIC debug
         chapter1
         chapter2
         chapter3

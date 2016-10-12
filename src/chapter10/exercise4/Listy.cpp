@@ -12,7 +12,7 @@ int Listy::getElementAt(size_t index) {
     if (index > this->capacity) {
         return -1;
     } else {
-        this->array[index];
+        return this->array[index];
     }
 }
 

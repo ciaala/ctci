@@ -107,7 +107,7 @@ namespace exercise16_4 {
         board[0][1] = BoardCell::cross;
         board[1][1] = BoardCell::cross;
         board[2][1] = BoardCell::cross;
-/**/
+*/
 
         board[2][0] = BoardCell::circle;
         board[1][1] = BoardCell::circle;

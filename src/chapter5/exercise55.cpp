@@ -15,5 +15,6 @@ void run_EX55() {
 
 int main_EX55(int argc, const char **argv) {
     run_EX55();
+    return 0;
 }
 

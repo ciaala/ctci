@@ -8,7 +8,7 @@ using namespace std;
 
 
 /////////// 5.3
-int findBitToTurn(int value) {
+void findBitToTurn(int value) {
     int i = 0;
     int cur_count = 0;
     int cur_p = -1;
@@ -40,6 +40,7 @@ int findBitToTurn(int value) {
     cout << endl;
     cout << "max_p : " << max_p << endl;
     cout << "max_count : " << max_count << endl;
+
 }
 
 void run_EX53() {

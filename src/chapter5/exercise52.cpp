@@ -41,6 +41,6 @@ void run_EX52() {
 
 int main_EX52(int argc, const char** argv) {
     // run_EX52();
-
+    return 0;
 }
 

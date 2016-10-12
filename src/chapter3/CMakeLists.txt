@@ -9,7 +9,7 @@ set(SOURCE_FILES
         exercise_03_4/main_03_4.cpp
         exercise_03_5/main_03_5.cpp
         exercise_03_6/main_03_6.cpp
-        )
+        old/library.h)
 
 
 add_library(${LIBRARY_NAME} ${SOURCE_FILES})
