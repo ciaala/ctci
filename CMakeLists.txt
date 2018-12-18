@@ -7,14 +7,14 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -g -o0")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -g -o0")
 find_package(Threads)
 set(SOURCE_FILES
-        src/main.cpp
-        )
+        src/main.cpp)
 add_subdirectory(src/chapter1)
 add_subdirectory(src/chapter2)
 add_subdirectory(src/chapter3)
 add_subdirectory(src/chapter4)
 add_subdirectory(src/chapter5)
 add_subdirectory(src/chapter7)
+add_subdirectory(src/chapter8)
 add_subdirectory(src/chapter10)
 add_subdirectory(src/chapter15)
 add_subdirectory(src/chapter16)
@@ -29,6 +29,7 @@ target_link_libraries(ctci LINK_PUBLIC debug
         chapter4
         chapter5
         chapter7
+        chapter8
         chapter10
         chapter15
         chapter16
